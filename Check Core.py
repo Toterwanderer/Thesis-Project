@@ -6,8 +6,8 @@ import random
 start=time.time()
 
 #PI_ = '11010000000000000000' #3 player roommates
-#PI_ = '11111111111111111111' #Everything allowed.
-PI_ = '11010000000000000000'
+PI_ = '11111111111111111111' #Everything allowed.
+#PI_ = '00000000000000000000'
 #PI_ = ''.join(random.choice('01') for _ in range(20)) #make random PI*
 preferences = list(itertools.permutations(range(1,5))) #make a permanent list
 
@@ -24,7 +24,7 @@ def modify_nested_list(nested_list, target):
 
     return list(dict.fromkeys(new_list))
 
-#print("PI*: ", PI_)
+print("PI*: ", PI_)
 #print(n_perms(PI_))
 PI = filter_array(PI_star,PI_)
 PIN = filter_array(PI_N,n_perms(PI_))
@@ -85,7 +85,7 @@ for r1 in modify_nested_list(preferences,1): #R1
                     #print("Good sign: We have a core for this set of preferences")
                     continue
                 else:
-                    print("This set of preferences has no core")
+                    #print("This set of preferences has no core")
                     print("PI* DOES NOT HAVE NONEMPTY STRICT CORE PROPERTY")
                     print('r1:',r1,'\nr2:',r2,'\nr3:',r3,'\nr4:',r4)
                     break1 = 1
