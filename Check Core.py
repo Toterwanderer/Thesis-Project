@@ -6,8 +6,9 @@ import random
 start=time.time()
 
 #PI_ = '11010000000000000000' #3 player roommates
-PI_ = '11111111111111111111' #Everything allowed.
+#PI_ = '11111111111111111111' #Everything allowed.
 #PI_ = '00000000000000000000'
+PI_ = '11111100000000000000'
 #PI_ = ''.join(random.choice('01') for _ in range(20)) #make random PI*
 preferences = list(itertools.permutations(range(1,5))) #make a permanent list
 
